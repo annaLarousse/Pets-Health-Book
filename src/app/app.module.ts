@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AddAnimalDilogComponent } from './components/add-animal/add-animal-dilog/add-animal-dilog.component';
@@ -10,8 +13,15 @@ import { AddAnimalDilogComponent } from './components/add-animal/add-animal-dilo
     AddAnimalDilogComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
   ],
+  exports: [
+    MatButtonModule,
+    MatCheckboxModule],
   providers: [],
   bootstrap: [AppComponent]
 })

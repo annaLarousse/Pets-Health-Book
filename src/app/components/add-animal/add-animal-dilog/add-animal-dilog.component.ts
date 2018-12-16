@@ -12,4 +12,7 @@ export class AddAnimalDilogComponent implements OnInit {
   ngOnInit() {
   }
 
+  public onClick(): void {
+    console.log('onClick');
+  }
 }
