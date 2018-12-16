@@ -1,4 +1,4 @@
-export interface Marking {
+export class Marking {
     TransponderCode?: string;
     TransponderDate?: Date;
     TransponderLocation?: Date;
