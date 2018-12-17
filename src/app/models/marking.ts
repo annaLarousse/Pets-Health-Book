@@ -5,4 +5,5 @@ export class Marking {
     TattooCode?: string;
     TattoDate?: Date;
     TattooLocation?: string;
+    AnimalId?: number;
 }

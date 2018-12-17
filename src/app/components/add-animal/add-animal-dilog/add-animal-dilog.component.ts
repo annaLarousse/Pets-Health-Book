@@ -3,6 +3,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 
 import { Animal } from 'src/app/models/animal';
 import { Marking } from 'src/app/models/marking';
+import { AnimalService } from 'src/app/services/animal/animal.service';
 
 @Component({
   selector: 'app-add-animal-dilog',
@@ -35,7 +36,7 @@ export class AddAnimalDilogComponent implements OnInit {
   public newAnimal: Animal;
   public newMarking: Marking;
 
-  constructor() { }
+  constructor(public animalService: AnimalService) { }
 
   ngOnInit() {
     this.form.addControl('animalFormGroup', this.animalFormGroup);
@@ -47,8 +48,8 @@ export class AddAnimalDilogComponent implements OnInit {
    */
   public onAddAnimal(): void {
     this.newAnimal = {
-      Name:  this.animalFormGroup.controls.name.value,
-      Specie:this.animalFormGroup.controls.specie.value,
+      Name: this.animalFormGroup.controls.name.value,
+      Specie: this.animalFormGroup.controls.specie.value,
       Sex: this.animalFormGroup.controls.sex.value,
       BirthDate: this.animalFormGroup.controls.birthDate.value,
       Breed: this.animalFormGroup.controls.breed.value,
@@ -87,5 +88,7 @@ export class AddAnimalDilogComponent implements OnInit {
     this.onAddAnimal();
     this.onAddMarking();
     this.newAnimal.Marking = this.newMarking;
+
+    this.animalService.addAnimal(this.newAnimal);
   }
 }
