@@ -1,7 +1,7 @@
 export class Marking {
     TransponderCode?: string;
     TransponderDate?: Date;
-    TransponderLocation?: Date;
+    TransponderLocation?: string;
     TattooCode?: string;
     TattoDate?: Date;
     TattooLocation?: string;

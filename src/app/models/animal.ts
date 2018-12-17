@@ -1,6 +1,6 @@
 import { Marking } from './marking';
 
-export class  Animal {
+export interface  Animal {
     Name: string;
     Specie: string;
     Sex: string;
