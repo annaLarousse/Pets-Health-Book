@@ -4,14 +4,13 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { Animal } from 'src/app/models/animal';
 import { Marking } from 'src/app/models/marking';
 import { AnimalService } from 'src/app/services/animal/animal.service';
-import { MatDialogConfig, MatDialogRef } from '@angular/material';
 
 @Component({
-  selector: 'app-add-animal-dilog',
-  templateUrl: './add-animal-dilog.component.html',
-  styleUrls: ['./add-animal-dilog.component.css']
+  selector: 'app-animal-dialog',
+  templateUrl: './animal-dialog.component.html',
+  styleUrls: ['./animal-dialog.component.css']
 })
-export class AddAnimalDilogComponent implements OnInit {
+export class AnimalDialogComponent implements OnInit {
 
   public form: FormGroup = new FormGroup({});
   public animalFormGroup: FormGroup = new FormGroup({

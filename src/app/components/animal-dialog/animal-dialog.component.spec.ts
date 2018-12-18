@@ -1,11 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import * as firebase from 'firebase';
 
-import { AddAnimalDilogComponent } from './add-animal-dilog.component';
+import { AnimalDialogComponent } from './animal-dialog.component';
 
-describe('AddAnimalDilogComponent', () => {
-  let component: AddAnimalDilogComponent;
-  let fixture: ComponentFixture<AddAnimalDilogComponent>;
+describe('AnimalDialogComponent', () => {
+  let component: AnimalDialogComponent;
+  let fixture: ComponentFixture<AnimalDialogComponent>;
 
   const config = {
     apiKey: "AIzaSyAzcEQD_LaST4I45Ub2B3rtZ2bz6dRgZQw",
@@ -19,13 +19,13 @@ describe('AddAnimalDilogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AddAnimalDilogComponent]
+      declarations: [AnimalDialogComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddAnimalDilogComponent);
+    fixture = TestBed.createComponent(AnimalDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

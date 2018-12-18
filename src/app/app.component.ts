@@ -3,7 +3,7 @@ import * as firebase from 'firebase';
 import { MatDialogConfig, MatDialogRef, MatDialog } from '@angular/material';
 import { Animal } from './models/animal';
 import { Marking } from './models/marking';
-import { AddAnimalDilogComponent } from './components/add-animal/add-animal-dilog/add-animal-dilog.component';
+import { AnimalDialogComponent } from './components/animal-dialog/animal-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ import { AddAnimalDilogComponent } from './components/add-animal/add-animal-dilo
 export class AppComponent {
   title = 'pets-health-book';
 
-  public dialogRef: MatDialogRef<AddAnimalDilogComponent>;
+  public dialogRef: MatDialogRef<AnimalDialogComponent>;
 
   constructor(public dialog: MatDialog) {
     const config = {
@@ -43,7 +43,7 @@ export class AppComponent {
       title: 'Ajouter un nouvel animal',
     };
 
-    this.dialogRef = this.dialog.open(AddAnimalDilogComponent, dialogConfig);
+    this.dialogRef = this.dialog.open(AnimalDialogComponent, dialogConfig);
 
   }
 

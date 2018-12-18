@@ -4,13 +4,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { AddAnimalDilogComponent } from './components/add-animal/add-animal-dilog/add-animal-dilog.component';
 import { AngularMaterialModule } from './angular-material.module';
+import { AnimalDialogComponent } from './components/animal-dialog/animal-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddAnimalDilogComponent,
+    AnimalDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +26,7 @@ import { AngularMaterialModule } from './angular-material.module';
     AppComponent
   ],
   entryComponents: [
-    AddAnimalDilogComponent
+    AnimalDialogComponent
   ],
 })
 export class AppModule {
