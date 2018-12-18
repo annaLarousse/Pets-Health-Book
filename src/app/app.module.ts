@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatDialogModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -18,11 +18,19 @@ import { AddAnimalDilogComponent } from './components/add-animal/add-animal-dilo
     NoopAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatDialogModule,
   ],
   exports: [
     MatButtonModule,
-    MatCheckboxModule],
+    MatCheckboxModule,
+    MatDialogModule
+  ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ],
+  entryComponents: [
+    AddAnimalDilogComponent
+  ],
 })
 export class AppModule { }

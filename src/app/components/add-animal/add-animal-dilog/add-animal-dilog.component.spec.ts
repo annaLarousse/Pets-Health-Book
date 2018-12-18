@@ -1,10 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import * as firebase from 'firebase';
 
 import { AddAnimalDilogComponent } from './add-animal-dilog.component';
 
 describe('AddAnimalDilogComponent', () => {
   let component: AddAnimalDilogComponent;
   let fixture: ComponentFixture<AddAnimalDilogComponent>;
+
+  const config = {
+    apiKey: "AIzaSyAzcEQD_LaST4I45Ub2B3rtZ2bz6dRgZQw",
+    authDomain: "pet-health-book.firebaseapp.com",
+    databaseURL: "https://pet-health-book.firebaseio.com",
+    projectId: "pet-health-book",
+    storageBucket: "pet-health-book.appspot.com",
+    messagingSenderId: "806767702879"
+  };
+  firebase.initializeApp(config);
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -70,6 +81,8 @@ describe('AddAnimalDilogComponent', () => {
   })
 
   it('#onSubmit() should create new Animal and Marking and link those two', () => {
+
+
     component.newMarking = {
       TransponderCode: '25026653458',
       TransponderDate: new Date('2017-12-16'),

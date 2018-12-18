@@ -4,6 +4,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { Animal } from 'src/app/models/animal';
 import { Marking } from 'src/app/models/marking';
 import { AnimalService } from 'src/app/services/animal/animal.service';
+import { MatDialogConfig, MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-add-animal-dilog',
