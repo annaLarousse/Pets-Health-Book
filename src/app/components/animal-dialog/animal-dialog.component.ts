@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { MAT_DIALOG_DATA } from '@angular/material';
 
 import { Animal } from 'src/app/models/animal';
 import { Marking } from 'src/app/models/marking';
@@ -11,6 +12,9 @@ import { AnimalService } from 'src/app/services/animal/animal.service';
   styleUrls: ['./animal-dialog.component.css']
 })
 export class AnimalDialogComponent implements OnInit {
+  public animal: Animal;
+  public marking: Marking;
+  public title: string;
 
   public form: FormGroup = new FormGroup({});
   public animalFormGroup: FormGroup = new FormGroup({
@@ -36,9 +40,14 @@ export class AnimalDialogComponent implements OnInit {
   public newAnimal: Animal;
   public newMarking: Marking;
 
-  constructor(public animalService: AnimalService) { }
+  constructor(public animalService: AnimalService,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit() {
+    this.animal = this.data.animal;
+    this.marking = this.data.marking;
+    this.title = this.data.title;
+    
     this.form.addControl('animalFormGroup', this.animalFormGroup);
     this.form.addControl('markingFormGroup', this.markingFormGroup);
   }

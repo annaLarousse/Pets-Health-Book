@@ -1,0 +1,17 @@
+<div class="dialog-container">
+    <div mat-dialog-title>{{title}}</div>
+
+    <form [formGroup]="form">
+        <mat-dialog-content>
+            <mat-horizontal-stepper>
+                <mat-step formGroupName="animalFormGroup">
+                    <ng-template matStepLabel>Description de l'animal</ng-template>
+                    <app-animal-details></app-animal-details>
+                    <button mat-button matStepperNext type="button" color="primary">Suivant</button>
+                </mat-step>
+            </mat-horizontal-stepper>
+        </mat-dialog-content>
+    </form>
+
+
+</div>
